@@ -23,9 +23,9 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   ratings = rating_list.split(/, /)
   ratings.each do |rating|
     if uncheck
-      step %Q[I uncheck "#{rating}"]
+      step %Q[I uncheck "ratings_#{rating}"]
     else
-      step %Q[I check "#{rating}"]
+      step %Q[I check "ratings_#{rating}"]
     end
   end
   # HINT: use String#split to split up the rating_list, then
