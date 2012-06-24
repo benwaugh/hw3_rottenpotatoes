@@ -32,7 +32,7 @@ end
 
 Then /I should see all of the movies/ do
   num_movies = Movie.count
-  rows = page.all('table tr').count - 1
+  rows = page.all('table tr').count - 1 # Don't count header row
   rows.should == num_movies
 end
 
