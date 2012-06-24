@@ -20,14 +20,16 @@ Background: movies have been added to database
   | Chicken Run             | G      | 21-Jun-2000  |
 
   And I am on the RottenPotatoes home page
+  And I check the following ratings: G, PG, PG-13, NC-17, R
+  And I press "Refresh"
 
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
-  Then I should see all the movies
+  Then I should see all of the movies
   And I should see "Amelie" before "Chocolat"
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
-  Then I should see all the movies
+  Then I should see all of the movies
   And I should see "Chocolat" before "Amelie"
 
